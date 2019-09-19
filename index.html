@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <link href="https://fonts.googleapis.com/css?family=Caveat|Itim&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Saira+Stencil+One&display=swap" rel="stylesheet"> 
+    <meta charset="UTF8">
+    <link href="style.css" rel="stylesheet">
+    <style>
+        #cadre {
+            margin-top : 150px;
+            display: flex; 
+        }
+
+        #cadre div {
+            flex-grow: 1;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        h1 {
+            background-color: #4682B4;
+            text-align: center;
+            border-radius: 10px 10px 10px 10px;
+            color: white
+        }
+
+        li {
+            list-style: none;
+            font-size: 120%;
+        }
+
+        li:hover {
+            background-color: #43A3EF;
+            color :white;
+            border-radius: 5px 5px 5px 5px;
+            
+        }
+
+        a {
+            text-decoration: none;
+            color: whitesmoke;
+        }
+    </style>
+    <script>
+        // variables globales
+        let cadre;
+        let iesn = [ 
+            {
+                label : "Bloc 1",
+                cours : [ 
+                    {
+                            label : "Anglais 1",
+                            ref : "cours/b1/anglais/anglais.html"
+                    },
+                    {
+                            label : "Comptabilité",
+                            ref : ""
+                    },
+                    {
+                            label : "Description des ordinateurs",
+                            ref : ""
+                    },
+                    {
+                            label : "Économie de l'entreprise",
+                            ref : ""
+                    },
+                    {
+                            label : "Français",
+                            ref : ""
+                    },
+                    {
+                            label : "C",
+                            ref : "cours/b1/c/c.html"
+                    },
+                    {
+                            label : "Java",
+                            ref : "cours/b1/java/java.html"
+                    },
+                    {
+                            label : "Principe de programmation",
+                            ref : ""
+                    },
+                    {
+                            label : "Outils Mathématique",
+                            ref : "",
+                    },
+                    {
+                            label : "Management",
+                            ref : ""
+                    },
+                    {
+                            label : "Organisation et Exploitation des données",
+                            ref : ""
+                    },
+                    {
+                            label : "PP Orienté Objet",
+                            ref : ""
+                    },
+                    {
+                            label : "HTML/CSS",
+                            ref : ""
+                    },
+                ]
+            },
+            {
+                label : "Bloc 2",
+                cours : [ 
+                    {
+                        label : "Comptabilité 2",
+                        ref : "",
+                    },
+                    {
+                        label : "Prolog",
+                        ref : "",
+                    },
+                    {
+                        label : "Cryptologie",
+                        ref : "",
+                    },
+                    {
+                        label : "Analyse Processus Métier",
+                        ref : "",
+                    },
+                    {
+                        label : "Analyse Orienté Objet",
+                        ref : "",
+                    },
+                    {
+                        label : "Droit",
+                        ref : "",
+                    },
+                    {
+                        label : "C#",
+                        ref : "",
+                    },
+                    {
+                        label : "Bases de données",
+                        ref : "",
+                    },
+                    {
+                        label : "Éthique et Déontologie",
+                        ref : "",
+                    },
+                    {
+                        label : "Traitement numérique des données",
+                        ref : "",
+                    },
+                    {
+                        label : "Stats 1",
+                        ref : "",
+                    },
+                    {
+                        label : "Stats 2",
+                        ref : "",
+                    },
+                    {
+                        label : "Java avancé",
+                        ref : "",
+                    },
+                    {
+                        label : "Réseaux",
+                        ref : "",
+                    },
+                    {
+                        label : "OS",
+                        ref : "",
+                    },
+                    {
+                        label : "Javascript",
+                        ref : "cours/b2/javascript/js.html",
+                    },
+                ]
+            },
+            {
+                label : "Bloc 3",
+                cours : [ 
+                    {
+                        label : "PHP",
+                        ref : "",
+                    },
+                    {
+                        label : "Java Web",
+                        ref : "",
+                    },
+                    {
+                        label : "Android",
+                        ref : "",
+                    }
+                ]
+            }
+        ];
+
+        window.onload = init;
+        function init() {
+            cadre = document.getElementById("cadre");
+            afficheBlocs();
+        }
+
+        function afficheBlocs() {
+            let div;
+            let ul;
+            let li;
+            let h1;
+            let a;
+
+            for(let b of iesn) {
+                div = document.createElement("div");
+                div.style.display = "inline-block";
+                
+                h1 = document.createElement("h1");
+                ul = document.createElement("ul");
+                h1.innerHTML = b.label;
+                
+                for(let c of b.cours) {
+                    a = document.createElement("a");
+                    li = document.createElement("li");
+                    a.href = c.ref;
+                    if(c.ref == "") {
+                        li.style.color = "grey";
+                    }
+                    li.innerHTML = c.label;
+                    a.appendChild(li);
+                    ul.appendChild(a);
+                }
+                cadre.appendChild(div);
+                div.append(h1);
+                div.appendChild(ul);
+            }
+        }
+
+       
+    </script>
+</head>
+<body>
+    <header>
+        Comité IG - IESN
+    </header>
+    <body>
+        <div id="cadre">
+            
+        </div>
+        <footer>
+            <div id="cadreFooter">
+                    
+            </div>
+        </footer>
+    </body>
+</body>
+</html>
+

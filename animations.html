@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <meta charset="UTF8">
+        <style>
+            #fondu {
+                border:brown 5px solid;
+                background-color: chocolate;
+                width: 100px;
+                height: 100px;
+            }
+        </style>
+        <script>
+            let cibleFondu;
+            window.onload = init;
+            function init() {
+                cibleFondu = document.getElementById("fondu");
+                cibleFondu.addEventListener("click", function() {
+                    fondu(this);
+                });
+                
+            }
+
+            function fondu(elem) {
+                let opacity = 1;
+                for(let i = 100 ; i >= 1 ; i--) {
+                    opacity -= 0.01;
+                    setTimeout(function() {
+                        console.log(opacity);
+                        changeOpicité(elem, opacity)
+                },  i * 10);   
+                }
+            }
+
+            function changeOpicité(elem, valeur, mesure) {
+                elem.style.opacity = valeur;
+            }
+        </script>
+    </header>
+    <body>
+        <article>
+            <h2>Fondu</h2>
+            <div id="fondu">Cible fondue</div>
+        </article>
+    </body>
+</html>

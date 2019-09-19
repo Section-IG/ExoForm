@@ -1,0 +1,114 @@
+body {
+    background-color: #282C34;
+    color : #ABA58E;
+    font-family: 'Itim';
+    text-shadow:0px 0px 3px rgba(0, 0, 0, 0.945);
+    
+}
+
+h2 {
+    color : #7BC379;
+    margin-left : 10px;
+    font-size: 200%;
+    text-shadow: 1px 1px 5px black;
+}
+
+header {
+    text-align: center;
+    font-size: 220%;
+    color: #43A3EF;
+    text-shadow: #4682B4 2px 2px 3px;
+    width: 100%;
+    padding: 0;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+}
+
+header, footer {
+    background-color: rgba(27, 27, 27, 0.781);
+    font-family: "Saira";
+}
+
+footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    text-align: center;
+ } 
+
+button, #home {
+    background-color: #43A3EF;
+    height: 50px;
+    width: 150px;
+    border:  2px solid black;
+    font-family: 'Caveat';
+    font-size: 150%;
+}
+
+button:hover, #home:hover {
+    color : white;
+}
+
+.code {
+    color: wheat;
+    font-family: 'Consolas';
+}
+
+img {
+    display: block;
+    margin: 12px;
+}
+
+.blocQuestion {
+    padding : 15px;
+}
+
+
+body:last-child {
+    margin-bottom: 40px;
+}
+
+h2:first-child {
+    margin-top : 80px;
+}
+
+label {
+    margin-left: 20px;
+}
+
+input {
+    margin-left: 10px;
+}
+
+
+#home {
+    float:left;
+    text-decoration: none;
+    font-size : 100%;
+    color: black;
+}
+
+em {
+    margin-right : 10px;
+    color: wheat;
+}
+
+@font-face {
+    font-family: "Saira";
+    src : url("fonts/SairaStencilOne-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Itim";
+    src : url("fonts/Itim-Regular.ttf");
+}
+
+
+@font-face {
+    font-family: "Caveat";
+    src : url("fonts/Caveat-Regular.ttf");
+}
